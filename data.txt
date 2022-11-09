@@ -1,0 +1,14 @@
+    GENDER  AGE  SMOKING  ...  SWALLOWING DIFFICULTY  CHEST PAIN  LUNG_CANCER
+0        M   69        1  ...                      2           2          YES
+1        M   74        2  ...                      2           2          YES
+2        F   59        1  ...                      1           2           NO
+3        M   63        2  ...                      2           2           NO
+4        F   63        1  ...                      1           1           NO
+..     ...  ...      ...  ...                    ...         ...          ...
+304      F   56        1  ...                      2           1          YES
+305      M   70        2  ...                      1           2          YES
+306      M   58        2  ...                      1           2          YES
+307      M   67        2  ...                      1           2          YES
+308      M   62        1  ...                      2           1          YES
+
+[309 rows x 16 columns]

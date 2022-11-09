@@ -1,0 +1,12 @@
+63     YES
+231    YES
+167    YES
+159     NO
+189    YES
+      ... 
+34      NO
+250    YES
+33     YES
+21     YES
+103    YES
+Name: LUNG_CANCER, Length: 62, dtype: object
