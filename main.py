@@ -68,21 +68,58 @@ def get_No():
 
 def get_variable(var_list,y_train):
     var_1=0
-    var_yes=0
-    for x in range(5):
-        if var_list[x]==1:
-            print("ll")
-            var_1=var_1+1
-           # if y_train[x] == "YES":
-            #    var_yes=var_yes+1
-    print(var_yes)
-    print(var_1)
+    var_2=0
+    var_1_yes=0
+    var_1_NO=0
+    var_2_yes=0
+    var_2_NO=0
+    count1=0
+    count2=0
+    index1=0
+    index2=0
 
+
+
+    for x in var_list:
+    # for y in y_train:
+
+   # index=var_list.inde
+     if x==1:
+         var_1 = var_1 + 1
+         index1=X_t.index[count1]
+         count1 = count1 + 1
+         if y_train[index1]=="YES":
+             var_1_yes=var_1_yes+1
+    if x == 2:
+        var_2 = var_2 + 1
+        index2 = X_t.index[count2]
+        count2 = count2 + 1
+        if y_train[index2] == "YES":
+            var_2_yes = var_2_yes + 1
+
+    var_1_NO=var_1-var_1_yes
+    var_2_NO = var_2 - var_2_yes
+    print(var_1)
+    print(var_1_yes)
+    print(var_1_NO)
+    print(var_2)
+    print(var_2_yes)
+    print(var_2_NO)
+
+
+
+
+
+      #      if y_train[count] == "YES":
+     #           var_yes = var_yes + 1
+   # print(var_yes)
+    #print(var_1)
 
    # no_num=len(y_train)- yes_num
-calc_entropy(get_Yes(),get_No())
-print(smoking[0])
 get_variable(chest_pain,y_train)
+#print(X_t.index[0])
+
+
 
 
 
