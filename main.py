@@ -182,7 +182,6 @@ def get_root_node():
     node.append(variables[min_index])
     print(node)
 
-
 def num_of_age():
     age_numbers=[]
     main_age=0
