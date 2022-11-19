@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 
-dataset = pd.read_csv(r'C:\Users\hebam\Desktop\cancerdata.csv')
+dataset = pd.read_csv(r'C:\Users\Miran\Documents\git\Project\cancerdata.csv')
 df = pd.DataFrame(data=dataset) # read rows and columns
 
 X = dataset.iloc[:,:-1]
