@@ -255,13 +255,50 @@ def controll(var_list, num):
                 return False
                 break
 
+def calc_leaf_entropy(var_list,i):
+    index= get_index(var_list)
+    p_value=0
+    n_value=0
+    for x in index[i]:
+        if y_train[x]=="YES":
+            p_value=p_value+1
+    n_value=len(index[i])-p_value
+    S_entropy=calc_entropy(p_value,n_value)
+    return S_entropy
 
+
+def get_leafvariable_entropy(index_list,var_list,y_train):
+    var_1=0
+    var_2=0
+    var_1_yes=0
+    var_1_NO=0
+    var_2_yes=0
+    var_2_NO=0
+
+    for x in index_list:
+        if var_list[x]==1:
+            var_1 = var_1 + 1
+            if y_train[x]=="YES":
+                var_1_yes=var_1_yes+1
+        if var_list[x]==2:
+             var_2 = var_2 + 1
+             if y_train[x] == "YES":
+                 var_2_yes = var_2_yes + 1
+
+    var_1_NO=var_1-var_1_yes
+    var_2_NO = var_2 - var_2_yes
+    entropy=[var_1,var_1_yes,var_1_NO, var_2, var_2_yes,var_2_NO]
+    print(entropy)
+    return entropy
 
 def get_node():
     index=get_root_node()
     node_variable=attributes[index]
     if controll(node_variable,1)==False:
-        print("None--")
+       calc_leaf_entropy(node_variable,0)
+    index = get_index(node_variable)
+    get_leafvariable_entropy(index[0], attributes[4], y_train)
+
 
 
 
